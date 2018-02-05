@@ -44,4 +44,4 @@ you have to provide `-DarchetypeGroupId` , `-DarchetypeArtifactId` , `-Darchetyp
 
 That's it. Each time you change the archetype (updating descriptor) - you need `mvn clean install` and `mvn archetype:generate ...` .
 
-It is also possible to create multimodule project, but it's not here. Just don't have time. But it should be easy having this as an example.
+It is also possible to create multimodule project, but it's not here. Just don't have time. But it should be easy to do, having this as an example.
