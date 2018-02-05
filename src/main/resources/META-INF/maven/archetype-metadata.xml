@@ -1,0 +1,22 @@
+<!--
+    1) This is Archetype descriptor which is used to describe archetypes's metadata.
+    2) It has to be stored in the file named archetype-metadata.xml file located in the src/main/resources/META-INF/maven directory.
+    3) There are two attributes you can provide :
+       * name    - String - Name of the Archetype, that will be displayed to the user when choosing an archetype.
+       * partial - boolean - Is this archetype representing a full Maven project or only parts? Default - false.
+ -->
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+                      name="maven-archetype-sample" partial="false" >
+
+    <!-- 1) Your project structure has to be defined here. -->
+    <!--
+         2) There has to be a folder called src/main/resources/archetype-resources.
+         This folder has to contain files/dirs that will be included to your project
+         structure. It can be any stuff like src files, test files, configs, etc.
+
+         3) The most important is pom.xml - this is your future app pom.xml !
+    -->
+
+
+</archetype-descriptor>
