@@ -43,15 +43,35 @@
                 |test
                   |java
         -->
-        <!-- No files yet ! Just directory structure -->
-        <fileSet filtered="false">
+        <!--
+            To add some source files :
+            1) We need to create dirs structure first !
+               1.1) add src/main/java and src/test/java under archetype-resources folder
+               1.2) add foo/App.java
+               1.3) add test/foo/AppTest.java
+            2) fileSet sections should be updated !
+               2.1) filtered="true" Filesets can be filtered,
+                    which means the selected files will be used as Velocity templates.
+                    Basically all ${param} (or __param__ in file name) will be replaced
+                    with values. E.g. check App.java - there is ${groupId}
+               2.2) packaged="true" Filesets can be packaged, which means the selected files
+                    will be generated/copied in a directory structure that is prepended by the package property.
+                    Example : As a result we get src/main/java/some/package/blah/foo/App.java
+         -->
+        <fileSet filtered="true" packaged="true">
             <directory>src/main/java</directory>
+            <includes>
+                <include>**/App.java</include>
+            </includes>
         </fileSet>
         <fileSet filtered="false">
             <directory>src/main/resources</directory>
         </fileSet>
-        <fileSet filtered="false">
+        <fileSet filtered="true" packaged="true">
             <directory>src/test/java</directory>
+            <includes>
+                <include>**/AppTest.java</include>
+            </includes>
         </fileSet>
 
     </fileSets>
