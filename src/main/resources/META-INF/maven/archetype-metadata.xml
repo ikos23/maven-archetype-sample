@@ -29,5 +29,32 @@
         </requiredProperty>
     </requiredProperties>
 
+    <!-- This section is used to describe further structure of the project. -->
+    <fileSets>
+
+        <!--
+            Having these files set we will get the following structure:
+            |foo-bar-app root dit
+              |pom.xml
+              |src
+                |main
+                  |java
+                  |resources
+                |test
+                  |java
+        -->
+        <!-- No files yet ! Just directory structure -->
+        <fileSet filtered="false">
+            <directory>src/main/java</directory>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory>src/test/java</directory>
+        </fileSet>
+
+    </fileSets>
+
 
 </archetype-descriptor>
