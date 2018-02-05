@@ -2,11 +2,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!--
+        These can be provided when you run mvn archetype:generate !
+        E.g. mvn archetype:generate .... -DgroupId=com.foo.bar -DartifactId=foo-app ....
+    -->
+    <!--
+        In a generated project there won't be any variables,
+        you'll get values you provide.
+    -->
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>jar</packaging>
 
+    <!-- This line contains custom param ${myProjectName} -->
+    <!-- It won't be used if you just add it as -DmyProjectName=SomeValue -->
+    <!-- To make it work - you need to add it to archetype-descriptor -->
     <name>This is my project. You can call it ${myProjectName}</name>
 
     <dependencies>

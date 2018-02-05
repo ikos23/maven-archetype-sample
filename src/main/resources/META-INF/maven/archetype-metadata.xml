@@ -18,5 +18,16 @@
          3) The most important is pom.xml - this is your future app pom.xml !
     -->
 
+    <!--
+         Any param that you are going to provide when mvn archetype:generate as
+         -DparamName=paramValue has to be declared here.
+      -->
+    <requiredProperties>
+        <!-- This is used in pom.xml of the future app. -->
+        <requiredProperty key="myProjectName">
+            <defaultValue>Foo Bar App</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
 
 </archetype-descriptor>

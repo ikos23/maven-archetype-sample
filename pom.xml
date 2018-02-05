@@ -9,4 +9,17 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <!--
+        1) This is pom.xml of new archetype.
+        2) It can be as simple as this one.
+        3) It is used only to build a jar which can be installed in local or
+        remote maven repo - briefly : mvn clean install
+        4) Afterwards you can create new maven project from this archetype :
+           mvn archetype:generate   \
+                -DarchetypeGroupId=com.ivk23.maven.archetype.sample \
+                -DarchetypeArtifactId=maven-archetype-sample \
+                ......
+
+    -->
+
 </project>
