@@ -1,0 +1,2 @@
+I am just a textfile added to the project's root.
+I can say ${hello} !

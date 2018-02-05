@@ -27,6 +27,16 @@
         <requiredProperty key="myProjectName">
             <defaultValue>Foo Bar App</defaultValue>
         </requiredProperty>
+
+        <!-- See fileWith__propertyFileSuffix__.properties  -->
+        <requiredProperty key="propertyFileSuffix">
+            <defaultValue>Suffix</defaultValue>
+        </requiredProperty>
+
+        <!-- See description.txt  -->
+        <requiredProperty key="hello">
+            <defaultValue>Hello User</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
     <!-- This section is used to describe further structure of the project. -->
@@ -71,6 +81,16 @@
             <directory>src/test/java</directory>
             <includes>
                 <include>**/AppTest.java</include>
+            </includes>
+        </fileSet>
+
+        <!-- Add some files to project's root (the same level as pom.xml) -->
+        <!-- filtered="true" because there is some variables that needs to be replaced. -->
+        <fileSet filtered="true">
+            <directory />
+            <includes>
+                <include>description.txt</include>
+                <include>fileWith*.properties</include>
             </includes>
         </fileSet>
 
